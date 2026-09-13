@@ -33,7 +33,7 @@ batch_df = df # SInce taking all rows
 # Create pipeline
 pipe = pipeline(
     "text-generation",
-    model="google/gemma-3-1b-it",
+    model="Skshackster/gemma3-1b-mental-health-fine-tuned",
     device="cuda",
     torch_dtype=torch.bfloat16,
     max_length=None
