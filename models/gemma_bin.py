@@ -36,7 +36,7 @@ class GemmaModel(nn.Module):
         self.classifier = nn.Linear(
             self.gemma.config.hidden_size,
             2
-        )
+        ).to(dtype=self.gemma.dtype)
 
     def forward(self, input_ids, attention_mask):
 
