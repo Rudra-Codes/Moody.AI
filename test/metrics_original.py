@@ -48,11 +48,11 @@ for review in batch_df["text"]:
             "role": "system",
             "content": [{"type": "text", "text": 
 """
-Classify the input movie review.
+Classify the input as POSITIVE **mindset** or NEGATIVE **mindset**
 
-Allowed outputs: POSITIVE or NEGATIVE.
-POSITIVE: The reviewer likes, enjoys, praises, or recommends the movie.
-NEGATIVE: The reviewer dislikes, criticizes, dislikes, or does not recommend the movie.
+Allowed outputs: POSITIVE or NEGATIVE. **Output Must be single word POSITIVE or NEGATIVE**
+POSITIVE: The person expresses a positive state of mind, attitude, feelings, or outlook.
+NEGATIVE: The person expresses a negative state of mind, attitude, feelings, or outlook.
 
 Judge the overall sentiment, not individual words.
 
