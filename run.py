@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 from huggingface_hub import login
-import pipeline.sampler
+from pipeline.sampler import stratified_sample
 from pipeline.dataset import IMDBDataset
 load_dotenv()
 hf_token = os.getenv("HF_TOKEN")
