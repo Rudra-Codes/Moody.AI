@@ -24,6 +24,7 @@ pipe = pipeline(
     model="google/gemma-3-1b-it",
     device="cuda",
     torch_dtype=torch.bfloat16,
+    max_length=None
 )
 
 # Build prompts for all 100 reviews
@@ -60,8 +61,9 @@ No explanation. No punctuation. No additional words.
 # Batch inference
 outputs = pipe(
     messages,
-    max_new_tokens=10,
+    max_new_tokens=4,
     batch_size=25,  # Adjust based on GPU memory
+    do_sample=False,
 )
 
 # Extract generated response
@@ -71,9 +73,9 @@ for output in outputs:
     response = output[0]['generated_text'][2]['content'].strip().lower()
 
     # Keep only the allowed labels
-    if "POSITIVE" == response:
+    if "positive" == response:
         prediction = 1
-    elif "NEGATIVE" == response:
+    elif "negative" == response:
         prediction = 0
     else:
         prediction = -1
