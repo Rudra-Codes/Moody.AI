@@ -28,7 +28,7 @@ train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
 test_loader = DataLoader(test_dataset, batch_size=8, shuffle=True)
 criterion = nn.CrossEntropyLoss()
 
-
+print("Hello")
 def get_model(model_name):
     if model_name == "gemma":
         from ds_proj.Moody.AI.models.gemma_bin import GemmaModel
