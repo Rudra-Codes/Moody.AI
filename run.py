@@ -31,7 +31,7 @@ criterion = nn.CrossEntropyLoss()
 print("Hello")
 def get_model(model_name):
     if model_name == "gemma":
-        from ds_proj.Moody.AI.models.gemma_bin import GemmaModel
+        from models.gemma_bin import GemmaModel
         return GemmaModel()
 
     raise ValueError(f"Unknown model name: {model_name}")
