@@ -238,3 +238,5 @@ def train(load_existing_model=False):
                 f"New best F1: {best_f1:.4f} "
                 f"model saved"
             )
+if __name__=="main":
+    train(False)
