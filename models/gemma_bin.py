@@ -37,6 +37,8 @@ class GemmaModel(nn.Module):
             self.gemma.config.hidden_size,
             2
         ).to(dtype=self.gemma.dtype)
+        nn.init.xavier_uniform_(self.classifier.weight)
+        nn.init.zeros_(self.classifier.bias)
 
     def forward(self, input_ids, attention_mask):
 
