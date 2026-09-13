@@ -2,3 +2,4 @@
 .idea/
 save_data.py
 .venv/
+.env
