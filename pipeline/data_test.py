@@ -1,6 +1,6 @@
 import pandas as pd
 
-DATASET_PATH = "data/dataset_train.csv"
+DATASET_PATH = "../data/dataset_train.csv"
 df = pd.read_csv(DATASET_PATH)
 print(df.head())
 

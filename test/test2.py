@@ -2,7 +2,7 @@ from transformers import pipeline
 import torch
 import pandas as pd
 
-DATASET_PATH = "data/cleaned_train.csv"
+DATASET_PATH = "../data/cleaned_train.csv"
 
 # Load dataset
 df = pd.read_csv(DATASET_PATH)

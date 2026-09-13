@@ -1,5 +1,4 @@
 import os
-import torch
 import pandas as pd
 from dotenv import load_dotenv
 from torch.utils.data import DataLoader
@@ -15,8 +14,8 @@ hf_token = os.getenv("HF_TOKEN")
 login(token=hf_token)
 print("Logged-in to HuggingFace")
 
-train_data = pd.read_csv("data/cleaned_train.csv")
-test_data = pd.read_csv("data/cleaned_test.csv")
+train_data = pd.read_csv("../data/cleaned_train.csv")
+test_data = pd.read_csv("../data/cleaned_test.csv")
 
 train_sample = sampler.stratified_sample(train_data, 10000)
 test_sample = sampler.stratified_sample(test_data, 1000)
